@@ -12,7 +12,11 @@ Build libsndfile from (http://www.mega-nerd.com/libsndfile/), install it via `ap
 
 Then:
 
-    $ sudo gem install waveform
+    $ gem install waveformjson
+
+or add following to Gemfile:
+
+    gem 'waveformjson'
 
 CLI Usage
 =========
