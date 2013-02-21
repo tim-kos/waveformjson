@@ -1,7 +1,7 @@
-Waveform
+Waveformjson
 ========
 
-Waveform is a class to generate waveform images from audio files. You can combine it with jPlayer to make a soundcloud.com style MP3 player. It also comes with a handy CLI you can use to generate waveform images on the command line.
+Waveformjson is based on [waveform](https://github.com/benalavi/waveform) and functions the same. The only difference is that it generates json instead of png files.
 
 Installation
 ============
@@ -14,23 +14,13 @@ Then:
 
     $ sudo gem install waveform
 
-Image creation depends on `chunky_png`, which has a faster native library called `oily_png` which will be used if availble.
-
-    $ sudo gem install oily_png
-
 CLI Usage
 =========
 
-    $ waveform song.wav waveform.png
+    $ waveform song.wav waveform.json
 
 There are some nifty options you can supply to switch things up:
 
-    -W sets the width (in pixels) of the waveform image.
-    -H sets the height (in pixels).
-    -c sets the color used to draw the waveform (in hex, can also use
-        'transparent').
-    -b sets the background color to draw the waveform on (in hex, and can use
-        'transparent' as well).
     -m sets the method used to sample the source audio file, it can either be
         'peak' or 'rms'. 'peak' is probably what you want because it looks
         cooler, but 'rms' is closer to what you actually hear.
@@ -40,12 +30,6 @@ There are also some less-nifty options:
     -q will generate your waveform without printing out a bunch of stuff.
     -h will print out a help screen with all this info.
     -F will automatically overwrite destination file.
-
-Generating a small waveform "cut out" of a white background is pretty useful,
-then you can overlay it on a web-gradient on the website for your new startup
-and it will look really cool. To make it you could use:
-
-    $ waveform -W900 -H140 -ctransparent -b#ffffff Motley\ Crüe/Kickstart\ my\ Heart.wav sweet_waveforms/Kickstart\ my\ Heart.png
 
 Usage in code
 =============
@@ -58,10 +42,6 @@ Requirements
 `ruby-audio`
 
 The gem version, *not* the old outdated library listed on RAA. `ruby-audio` is a wrapper for `libsndfile`, on my Ubuntu 10.04LTS VM I installed the necessary libs to build `ruby-audio` via: `sudo apt-get install libsndfile1-dev`.
-
-`chunky_png`
-
-`chunky_png` is a pure ruby (!) PNG manipulation library. Caveat to this requirement is that if you also install `oily_png` you will get *better performance* as it uses some C code, and C code is fast.
 
 Converting MP3 to WAV
 =====================
