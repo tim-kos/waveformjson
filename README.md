@@ -1,7 +1,7 @@
 Waveformjson
 ========
 
-Waveformjson is based on [waveform](https://github.com/benalavi/waveform) and functions the same. The only difference is that it generates json instead of json files.
+Waveformjson is based on [waveform](https://github.com/benalavi/waveform) and functions the same. The only difference is that it generates json instead of png files.
 
 Installation
 ============
