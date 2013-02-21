@@ -21,7 +21,7 @@ or add following to Gemfile:
 CLI Usage
 =========
 
-    $ Waveformjson song.wav waveform.json
+    $ waveformjson song.wav waveform.json
 
 There are some nifty options you can supply to switch things up:
 
@@ -38,7 +38,7 @@ There are also some less-nifty options:
 Usage in code
 =============
 
-The CLI is really just a thin wrapper around the Waveform class, which you can also use in your programs for reasons I haven't thought of. The Waveform class takes pretty much the same options as the CLI when generating waveforms.
+The CLI is really just a thin wrapper around the Waveformjson class, which you can also use in your programs for reasons I haven't thought of. The Waveform class takes pretty much the same options as the CLI when generating waveforms.
 
 Requirements
 ============
@@ -60,31 +60,9 @@ Tests
 =====
 
     $ rake
-    
-If you get an error about not being able to find ruby-audio gem (and you have ruby-audio gem) you might need to let rake know how to load your gems -- if you're using rubygems:
 
-    $ export RUBYOPT="rubygems"
-    $ rake
 
 Sample sound file used in tests is in the Public Domain from soundbible.com: <http://soundbible.com/1598-Electronic-Chime.html>.
-
-Changes
-=======
-
-0.1.2
------
-  * Added more helpful deprecation notice for non-WAV audio files
-
-0.1.1
------
-  * Fixed RMS calculation (was calculating RMSD instead of RMS before) -- thanks, cviedmai
-
-0.1.0
------
-  * No more wrapping ffmpeg to automatically convert mp3 to wav
-  * Fixed support for mono audio sources (4-channel, surround, etc. should also work)
-  * Change to gemspec & added seperate version file so that bundler won't try to load ruby-audio (thanks, amiel)
-  * Changed Waveform-class API as there's no longer a need to instantiate a waveform
 
 References
 ==========
@@ -97,7 +75,7 @@ References
 License
 =======
 
-Copyright (c) 2010-2012 Ben Alavi
+Copyright (c) 2013 liufengyun
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
