@@ -6,7 +6,7 @@ Waveformjson is based on [waveform](https://github.com/benalavi/waveform) and fu
 Installation
 ============
 
-Waveform depends on `ruby-audio`, which in turn depends on libsndfile.
+Waveformjson depends on `ruby-audio`, which in turn depends on libsndfile.
 
 Build libsndfile from (http://www.mega-nerd.com/libsndfile/), install it via `apt` (`sudo apt-get install libsndfile1-dev`), `libsndfile` in macports, etc...
 
@@ -21,7 +21,7 @@ or add following to Gemfile:
 CLI Usage
 =========
 
-    $ waveform song.wav waveform.json
+    $ Waveformjson song.wav waveform.json
 
 There are some nifty options you can supply to switch things up:
 
