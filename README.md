@@ -1,7 +1,7 @@
 Waveformjson
 ========
 
-Waveformjson is based on [waveform](https://github.com/benalavi/waveform) and functions the same. The only difference is that it generates json instead of png files.
+Waveformjson is based on [waveform](https://github.com/benalavi/waveform) and functions the same. The only difference is that it generates json instead of json files.
 
 Installation
 ============
@@ -28,6 +28,7 @@ There are some nifty options you can supply to switch things up:
     -m sets the method used to sample the source audio file, it can either be
         'peak' or 'rms'. 'peak' is probably what you want because it looks
         cooler, but 'rms' is closer to what you actually hear.
+    -W sets the width (in pixels) of the waveform.
 
 There are also some less-nifty options:
 
