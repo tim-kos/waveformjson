@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require "./waveformjson/lib/waveformjson.rb"
+require "/srv/current/stack/bin/waveformjson/lib/waveformjson.rb"
 require "optparse"
 
 options = Waveformjson::DefaultOptions
