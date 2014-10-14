@@ -21,5 +21,5 @@ Gem::Specification.new do |s|
 
   s.executables = "waveformjson"
 
-  s.add_dependency "ruby-audio"
+  s.add_dependency "ruby-audio", "1.6.1"
 end
